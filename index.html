@@ -47,6 +47,21 @@
         #tech-modal-content {
             transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
         }
+        /* Logo backdrop for hero section */
+        #home::after {
+            content: '';
+            background-image: url('logo.jpg');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.05; /* Watermark effect */
+            z-index: 0; /* Behind the content but above the background */
+        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -56,7 +71,7 @@
         <div class="container mx-auto flex justify-between items-center flex-wrap">
             <!-- Logo and Company Name -->
             <div class="flex items-center space-x-3">
-                <img src="https://placehold.co/40x40/2563EB/FFFFFF?text=PNS" alt="Company Logo" class="rounded-full">
+                <img src="logo.jpg" alt="Company Logo" class="h-10 w-auto">
                 <div>
                     <h1 class="text-xl md:text-2xl font-bold text-blue-700">Preferred Nonwoven Solutions LLC</h1>
                     <p class="text-sm italic text-gray-600 hidden sm:block">Engineered for Excellence</p>
@@ -93,7 +108,7 @@
 
     <!-- Hero Section -->
     <section id="home" class="relative bg-gradient-to-r from-blue-700 to-blue-500 text-white py-20 md:py-32 overflow-hidden rounded-b-lg mb-10 shadow-xl">
-        <div class="container mx-auto text-center px-4">
+        <div class="container mx-auto text-center px-4 relative z-10">
             <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-2">
                 Preferred Nonwoven Solutions
             </h2>
@@ -106,11 +121,6 @@
             <a href="#contact" class="inline-block bg-white text-blue-700 hover:bg-blue-100 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
                 Partner With Us Today
             </a>
-        </div>
-        <div class="absolute inset-0 z-0 opacity-10">
-            <svg class="w-full h-full" viewBox="0 0 1440 320" preserveAspectRatio="none">
-                <path fill="#ffffff" fill-opacity="0.1" d="M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,170.7C672,160,768,160,864,176C960,192,1056,224,1152,224C1248,224,1344,192,1392,176L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
-            </svg>
         </div>
     </section>
 
