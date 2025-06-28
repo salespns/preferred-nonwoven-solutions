@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferred Nonwoven Solutions LLC</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* Lighter gray background */
+        }
+        /* Custom scrollbar for aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e0e0e0;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #a0aec0; /* Gray scrollbar thumb */
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #718096; /* Darker gray on hover */
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Styles for scroll animations */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Modal Styles */
+        #tech-modal-backdrop {
+            transition: opacity 0.3s ease-in-out;
+        }
+        #tech-modal-content {
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-lg p-4 md:p-6 sticky top-0 z-50 rounded-b-lg">
+        <div class="container mx-auto flex justify-between items-center flex-wrap">
+            <!-- Logo and Company Name -->
+            <div class="flex items-center space-x-3">
+                <img src="https://placehold.co/40x40/2563EB/FFFFFF?text=PNS" alt="Company Logo" class="rounded-full">
+                <div>
+                    <h1 class="text-xl md:text-2xl font-bold text-blue-700">Preferred Nonwoven Solutions LLC</h1>
+                    <p class="text-sm italic text-gray-600 hidden sm:block">Engineered for Excellence</p>
+                </div>
+            </div>
+            <!-- Navigation Menu -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 ease-in-out">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 ease-in-out">About Us</a>
+                <a href="#technologies" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 ease-in-out">Technologies</a>
+                <a href="#solutions" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 ease-in-out">Our Solutions</a>
+                <a href="#industries" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 ease-in-out">Industries</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 ease-in-out">Contact</a>
+            </nav>
+            <!-- Hamburger Menu for Mobile -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 hover:text-blue-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden mt-4">
+            <a href="#home" class="block py-2 px-4 text-sm text-gray-700 hover:bg-blue-50 rounded">Home</a>
+            <a href="#about" class="block py-2 px-4 text-sm text-gray-700 hover:bg-blue-50 rounded">About Us</a>
+            <a href="#technologies" class="block py-2 px-4 text-sm text-gray-700 hover:bg-blue-50 rounded">Technologies</a>
+            <a href="#solutions" class="block py-2 px-4 text-sm text-gray-700 hover:bg-blue-50 rounded">Our Solutions</a>
+            <a href="#industries" class="block py-2 px-4 text-sm text-gray-700 hover:bg-blue-50 rounded">Industries</a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-gray-700 hover:bg-blue-50 rounded">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-gradient-to-r from-blue-700 to-blue-500 text-white py-20 md:py-32 overflow-hidden rounded-b-lg mb-10 shadow-xl">
+        <div class="container mx-auto text-center px-4">
+            <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-2">
+                Preferred Nonwoven Solutions
+            </h2>
+            <p class="text-2xl md:text-3xl italic text-white/90 mb-4">
+                Engineered for Excellence
+            </p>
+            <p class="text-lg md:text-xl mb-8">
+                Over 20 Years of Market Leadership in Advanced Nonwoven Materials
+            </p>
+            <a href="#contact" class="inline-block bg-white text-blue-700 hover:bg-blue-100 px-8 py-3 rounded-full text-lg font-semibold shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+                Partner With Us Today
+            </a>
+        </div>
+        <div class="absolute inset-0 z-0 opacity-10">
+            <svg class="w-full h-full" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="#ffffff" fill-opacity="0.1" d="M0,160L48,170.7C96,181,192,203,288,202.7C384,203,480,181,576,170.7C672,160,768,160,864,176C960,192,1056,224,1152,224C1248,224,1344,192,1392,176L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="container mx-auto px-4 py-16 bg-white rounded-lg shadow-md mb-10 reveal-on-scroll">
+        <h3 class="text-3xl md:text-4xl font-bold text-center mb-10 text-blue-700">About Preferred Nonwoven Solutions LLC</h3>
+        <div class="flex flex-col md:flex-row items-center md:space-x-8">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <img src="https://placehold.co/600x400/D1D5DB/374151?text=Innovation+|+Experience" alt="Team discussing nonwovens" class="rounded-xl shadow-lg w-full h-auto object-cover">
+            </div>
+            <div class="md:w-1/2 text-lg leading-relaxed">
+                <p class="mb-4">
+                    With over <strong>20 years of unparalleled market experience</strong>, Preferred Nonwoven Solutions LLC stands as a trusted leader in the advanced composites and nonwoven materials industry. We leverage deep industry knowledge and an extensive network to provide bespoke solutions that meet the evolving demands of various sectors.
+                </p>
+                <p class="mb-4">
+                    Our mission is to bridge the gap between cutting-edge material science and practical application, helping our clients innovate, optimize, and grow. We are committed to delivering the highest quality products, coupled with reliable service and competitive pricing, ensuring long-term partnerships built on trust and mutual success.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nonwoven Technologies Section -->
+    <section id="technologies" class="container mx-auto px-4 py-16 bg-white rounded-lg shadow-md mb-10 reveal-on-scroll">
+        <h3 class="text-3xl md:text-4xl font-bold text-center mb-10 text-blue-700">Nonwoven Technologies We Offer</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Technology cards are now clickable -->
+            <div class="tech-card bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out text-center cursor-pointer" data-title="Spunbond" data-img="https://placehold.co/300x200/3B82F6/FFFFFF?text=Spunbond" data-description="Spunbond technology produces nonwovens by spinning continuous filaments of thermoplastic polymers, which are then stretched and bonded. This results in fabrics with high tensile strength, durability, and uniformity, making them ideal for applications in hygiene, medical, construction, and agriculture.">
+                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=SB" alt="Spunbond Icon" class="mx-auto mb-4 rounded-full pointer-events-none">
+                <h4 class="text-xl font-semibold mb-2 text-blue-600 pointer-events-none">Spunbond</h4>
+                <p class="text-gray-700 text-sm pointer-events-none">Continuous filaments are extruded, stretched, and laid into a web, offering excellent strength and stability.</p>
+            </div>
+             <div class="tech-card bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out text-center cursor-pointer" data-title="Meltblown" data-img="https://placehold.co/300x200/3B82F6/FFFFFF?text=Meltblown" data-description="Meltblown technology uses high-velocity air to blow molten thermoplastic resin from an extruder die tip onto a conveyor screen. This creates a fine, fibrous web of micro-denier fibers. The resulting fabric offers excellent filtration, barrier, and absorption properties, crucial for masks, wipes, and insulation.">
+                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=MB" alt="Meltblown Icon" class="mx-auto mb-4 rounded-full pointer-events-none">
+                <h4 class="text-xl font-semibold mb-2 text-blue-600 pointer-events-none">Meltblown</h4>
+                <p class="text-gray-700 text-sm pointer-events-none">Fine fibers are produced from molten polymer, creating a web with superior filtration and absorption properties.</p>
+            </div>
+            <div class="tech-card bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out text-center cursor-pointer" data-title="SMS Composites" data-img="https://placehold.co/300x200/3B82F6/FFFFFF?text=SMS" data-description="SMS (Spunbond-Meltblown-Spunbond) is a tri-laminate nonwoven fabric. It combines the strength and durability of spunbond layers with the excellent filtration and barrier properties of the inner meltblown layer. This composite structure is widely used for medical gowns, drapes, and sterilization wraps.">
+                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=SMS" alt="SMS Icon" class="mx-auto mb-4 rounded-full pointer-events-none">
+                <h4 class="text-xl font-semibold mb-2 text-blue-600 pointer-events-none">SMS Composites</h4>
+                <p class="text-gray-700 text-sm pointer-events-none">Multi-layer fabric (Spunbond-Meltblown-Spunbond) that combines strength with a high-efficiency bacterial barrier.</p>
+            </div>
+            <div class="tech-card bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out text-center cursor-pointer" data-title="Needlepunch" data-img="https://placehold.co/300x200/3B82F6/FFFFFF?text=Needlepunch" data-description="Needlepunch is a mechanical bonding process where a web of staple fibers is repeatedly penetrated by barbed needles. This entangles the fibers, creating a strong, dense fabric with a felt-like appearance. It's used for durable goods like geotextiles, automotive carpets, and furniture components.">
+                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=NP" alt="Needlepunch Icon" class="mx-auto mb-4 rounded-full pointer-events-none">
+                <h4 class="text-xl font-semibold mb-2 text-blue-600 pointer-events-none">Needlepunch</h4>
+                <p class="text-gray-700 text-sm pointer-events-none">Fibers are mechanically interlocked with barbed needles, resulting in dense, felt-like fabrics for durable applications.</p>
+            </div>
+            <div class="tech-card bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out text-center cursor-pointer" data-title="Spunlace" data-img="https://placehold.co/300x200/3B82F6/FFFFFF?text=Spunlace" data-description="Spunlace, or hydroentanglement, uses fine, high-pressure jets of water to entangle fibers and create a nonwoven fabric. The process avoids chemical binders, resulting in a soft, strong, and highly absorbent material that is excellent for wipes, medical gauze, and beauty applications.">
+                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=SL" alt="Spunlace Icon" class="mx-auto mb-4 rounded-full pointer-events-none">
+                <h4 class="text-xl font-semibold mb-2 text-blue-600 pointer-events-none">Spunlace</h4>
+                <p class="text-gray-700 text-sm pointer-events-none">Fibers are entangled using high-pressure water jets, creating soft, strong, and absorbent materials without binders.</p>
+            </div>
+            <div class="tech-card bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out text-center cursor-pointer" data-title="Carded" data-img="https://placehold.co/300x200/3B82F6/FFFFFF?text=Carded" data-description="Carding is a mechanical process that opens, cleans, and aligns staple fibers to form a uniform web. This web can then be bonded through various methods (thermal, chemical, or needlepunch). Carded nonwovens are known for their softness and loft, commonly used in hygiene products, wipes, and interlinings.">
+                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=CD" alt="Carded Icon" class="mx-auto mb-4 rounded-full pointer-events-none">
+                <h4 class="text-xl font-semibold mb-2 text-blue-600 pointer-events-none">Carded</h4>
+                <p class="text-gray-700 text-sm pointer-events-none">Staple fibers are aligned to form a web, which can then be bonded. Ideal for creating lofty and soft products.</p>
+            </div>
+             <div class="tech-card bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out text-center cursor-pointer" data-title="Airlaid" data-img="https://placehold.co/300x200/3B82F6/FFFFFF?text=Airlaid" data-description="In the airlaid process, short fibers (often wood pulp) are suspended in air and deposited onto a moving screen to form a web. This creates a fabric with a structure similar to paper but with much higher bulk, softness, and absorption capacity, making it ideal for absorbent cores in diapers and feminine hygiene products.">
+                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=AL" alt="Airlaid Icon" class="mx-auto mb-4 rounded-full pointer-events-none">
+                <h4 class="text-xl font-semibold mb-2 text-blue-600 pointer-events-none">Airlaid</h4>
+                <p class="text-gray-700 text-sm pointer-events-none">Cellulose fibers are formed into a web with air, producing a highly absorbent, paper-like fabric structure.</p>
+            </div>
+            <div class="tech-card bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out text-center cursor-pointer" data-title="Wetlaid" data-img="https://placehold.co/300x200/3B82F6/FFFFFF?text=Wetlaid" data-description="The wetlaid process is similar to papermaking. Short fibers are dispersed in a large volume of water, which is then drained through a moving screen to form a web. This method allows for the use of a wide variety of natural and synthetic fibers, creating highly uniform and specialized fabrics for applications like tea bags, wallpapers, and filtration media.">
+                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=WL" alt="Wetlaid Icon" class="mx-auto mb-4 rounded-full pointer-events-none">
+                <h4 class="text-xl font-semibold mb-2 text-blue-600 pointer-events-none">Wetlaid</h4>
+                <p class="text-gray-700 text-sm pointer-events-none">Fibers are dispersed in water and collected on a screen, allowing for uniform webs with specialized fibers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Solutions Section -->
+    <section id="solutions" class="container mx-auto px-4 py-16 bg-white rounded-lg shadow-md mb-10 reveal-on-scroll">
+        <h3 class="text-3xl md:text-4xl font-bold text-center mb-10 text-blue-700">Our Tailored Nonwoven Solutions</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out">
+                <h4 class="text-2xl font-semibold mb-3 text-blue-600">Custom Material Sourcing</h4>
+                <p class="text-gray-700">Leveraging our vast network, we connect you with the ideal nonwoven materials, including specialized films, fibers, and composites.</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out">
+                <h4 class="text-2xl font-semibold mb-3 text-blue-600">Product Development</h4>
+                <p class="text-gray-700">From concept to commercialization, we assist in integrating nonwoven materials into your existing or new products.</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out">
+                <h4 class="text-2xl font-semibold mb-3 text-blue-600">Technical Consulting</h4>
+                <p class="text-gray-700">Our deep industry expertise provides valuable insights into material selection, process optimization, and troubleshooting.</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out">
+                <h4 class="text-2xl font-semibold mb-3 text-blue-600">Supply Chain Optimization</h4>
+                <p class="text-gray-700">We help streamline your nonwoven supply chain, mitigating risks, improving lead times, and ensuring consistent product availability.</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out">
+                <h4 class="text-2xl font-semibold mb-3 text-blue-600">Quality Assurance</h4>
+                <p class="text-gray-700">We facilitate rigorous quality assurance and testing protocols for nonwoven materials to guarantee compliance and performance.</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out">
+                <h4 class="text-2xl font-semibold mb-3 text-blue-600">Market Intelligence</h4>
+                <p class="text-gray-700">Stay ahead with our up-to-date market intelligence on nonwoven trends, new technologies, and competitive landscapes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Served Section -->
+    <section id="industries" class="container mx-auto px-4 py-16 bg-white rounded-lg shadow-md mb-10 reveal-on-scroll">
+        <h3 class="text-3xl md:text-4xl font-bold text-center mb-10 text-blue-700">Industries We Serve</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 text-center">
+            <div class="p-4 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition duration-300 ease-in-out">
+                <img src="https://placehold.co/100x100/60A5FA/FFFFFF?text=Lam" alt="Lamination Industry Icon" class="mx-auto mb-4 rounded-full">
+                <p class="font-semibold text-gray-800">Lamination</p>
+            </div>
+            <div class="p-4 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition duration-300 ease-in-out">
+                <img src="https://placehold.co/100x100/60A5FA/FFFFFF?text=Auto" alt="Automotive Industry Icon" class="mx-auto mb-4 rounded-full">
+                <p class="font-semibold text-gray-800">Automotive</p>
+            </div>
+            <div class="p-4 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition duration-300 ease-in-out">
+                <img src="https://placehold.co/100x100/60A5FA/FFFFFF?text=Const" alt="Construction Industry Icon" class="mx-auto mb-4 rounded-full">
+                <p class="font-semibold text-gray-800">Construction</p>
+            </div>
+            <div class="p-4 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition duration-300 ease-in-out">
+                <img src="https://placehold.co/100x100/60A5FA/FFFFFF?text=Aero" alt="Aerospace Industry Icon" class="mx-auto mb-4 rounded-full">
+                <p class="font-semibold text-gray-800">Aerospace</p>
+            </div>
+            <div class="p-4 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition duration-300 ease-in-out">
+                <img src="https://placehold.co/100x100/60A5FA/FFFFFF?text=Marine" alt="Marine Industry Icon" class="mx-auto mb-4 rounded-full">
+                <p class="font-semibold text-gray-800">Marine</p>
+            </div>
+            <div class="p-4 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition duration-300 ease-in-out">
+                <img src="https://placehold.co/100x100/60A5FA/FFFFFF?text=Med" alt="Medical Industry Icon" class="mx-auto mb-4 rounded-full">
+                <p class="font-semibold text-gray-800">Medical</p>
+            </div>
+            <div class="p-4 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition duration-300 ease-in-out">
+                <img src="https://placehold.co/100x100/60A5FA/FFFFFF?text=Filt" alt="Filtration Industry Icon" class="mx-auto mb-4 rounded-full">
+                <p class="font-semibold text-gray-800">Filtration</p>
+            </div>
+            <div class="p-4 bg-gray-50 rounded-xl shadow-sm hover:shadow-md transition duration-300 ease-in-out">
+                <img src="https://placehold.co/100x100/60A5FA/FFFFFF?text=Geo" alt="Geotextile Industry Icon" class="mx-auto mb-4 rounded-full">
+                <p class="font-semibold text-gray-800">Geotextiles</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Contact Section -->
+    <section id="contact" class="container mx-auto px-4 py-16 bg-blue-800 text-white rounded-lg shadow-md mb-10 reveal-on-scroll">
+        <h3 class="text-3xl md:text-4xl font-bold text-center mb-10">Ready to Elevate Your Nonwoven Solutions?</h3>
+        <p class="text-lg text-center mb-8 max-w-2xl mx-auto">
+            Leverage our two decades of expertise to find the perfect material, optimize your processes, and achieve your project goals. Contact us today for a consultation.
+        </p>
+        <div class="max-w-md mx-auto bg-white p-8 rounded-xl shadow-lg text-gray-800">
+            <h4 class="text-2xl font-semibold mb-6 text-blue-700 text-center">Get in Touch</h4>
+            <form id="contact-form" class="space-y-4">
+                <div id="form-inputs">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                        <input type="text" id="name" name="name" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="company" class="block text-sm font-medium text-gray-700">Company (Optional)</label>
+                        <input type="text" id="company" name="company" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Your Message</label>
+                        <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
+                    </div>
+                </div>
+                <div id="form-success" class="hidden text-center p-4 bg-green-100 text-green-800 rounded-md">
+                    Thank you! Your message has been sent. We will get back to you shortly.
+                </div>
+                <button type="submit" id="submit-btn" class="w-full bg-blue-600 text-white py-3 px-4 rounded-md font-semibold hover:bg-blue-700 transition duration-300 ease-in-out shadow-lg">
+                    Send Message
+                </button>
+            </form>
+            <p class="text-center text-gray-600 mt-6 text-sm">
+                Or reach us at: <a href="mailto:info@preferrednonwoven.com" class="text-blue-600 hover:underline">info@preferrednonwoven.com</a>
+                <br> Call Us: <a href="tel:765-749-6457" class="text-blue-600 hover:underline">765.749.6457</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-8 rounded-t-lg">
+        <div class="container mx-auto px-4 text-center text-sm">
+             <p class="mb-2">
+                <a href="tel:765-749-6457" class="hover:text-blue-400 transition duration-300">765.749.6457</a>
+            </p>
+            <p>&copy; 2025 Preferred Nonwoven Solutions LLC. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-blue-400 transition duration-300">Privacy Policy</a>
+                <a href="#" class="hover:text-blue-400 transition duration-300">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Technology Modal -->
+    <div id="tech-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
+        <div id="tech-modal-backdrop" class="absolute inset-0 bg-black bg-opacity-60 opacity-0"></div>
+        <div id="tech-modal-content" class="relative bg-white w-11/12 md:max-w-2xl mx-auto rounded-xl shadow-2xl p-6 md:p-8 transform scale-95 opacity-0">
+            <button id="tech-modal-close" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <img id="tech-modal-img" src="" alt="Technology Image" class="w-full h-48 object-cover rounded-lg mb-4">
+            <h3 id="tech-modal-title" class="text-3xl font-bold text-blue-700 mb-3"></h3>
+            <p id="tech-modal-description" class="text-gray-700 leading-relaxed"></p>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile Menu Toggle ---
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if(menuBtn) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            const mobileLinks = document.querySelectorAll('#mobile-menu a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // --- Scroll Animation Logic ---
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal-on-scroll').forEach(section => {
+                observer.observe(section);
+            });
+
+            // --- Technology Modal Logic ---
+            const techModal = document.getElementById('tech-modal');
+            const techModalBackdrop = document.getElementById('tech-modal-backdrop');
+            const techModalContent = document.getElementById('tech-modal-content');
+            const techModalClose = document.getElementById('tech-modal-close');
+            const techModalImg = document.getElementById('tech-modal-img');
+            const techModalTitle = document.getElementById('tech-modal-title');
+            const techModalDescription = document.getElementById('tech-modal-description');
+            
+            document.querySelectorAll('.tech-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    // Populate modal
+                    techModalImg.src = card.dataset.img;
+                    techModalImg.alt = card.dataset.title;
+                    techModalTitle.textContent = card.dataset.title;
+                    techModalDescription.textContent = card.dataset.description;
+
+                    // Show modal with animation
+                    techModal.classList.remove('hidden');
+                    setTimeout(() => {
+                        techModalBackdrop.classList.remove('opacity-0');
+                        techModalContent.classList.remove('scale-95', 'opacity-0');
+                    }, 10); // small delay to allow display change
+                });
+            });
+
+            const closeModal = () => {
+                techModalBackdrop.classList.add('opacity-0');
+                techModalContent.classList.add('scale-95', 'opacity-0');
+                setTimeout(() => {
+                    techModal.classList.add('hidden');
+                }, 300); // match transition duration
+            };
+
+            techModalClose.addEventListener('click', closeModal);
+            techModalBackdrop.addEventListener('click', closeModal);
+            
+            // --- Dynamic Contact Form Logic ---
+            const contactForm = document.getElementById('contact-form');
+            if(contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = document.getElementById('submit-btn');
+                    const formInputs = document.getElementById('form-inputs');
+                    const formSuccess = document.getElementById('form-success');
+                    
+                    submitBtn.textContent = 'Sending...';
+                    submitBtn.disabled = true;
+
+                    // Simulate form submission
+                    setTimeout(() => {
+                        formInputs.style.display = 'none';
+                        formSuccess.classList.remove('hidden');
+                        submitBtn.style.display = 'none';
+                    }, 1500);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
