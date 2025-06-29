@@ -40,13 +40,6 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* Modal Styles */
-        #tech-modal-backdrop {
-            transition: opacity 0.3s ease-in-out;
-        }
-        #tech-modal-content {
-            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -66,7 +59,7 @@
             <nav class="hidden md:flex space-x-6">
                 <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 ease-in-out">Home</a>
                 <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 ease-in-out">About Us</a>
-                <a href="#technologies" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 ease-in-out">Technologies</a>
+                <a href="#products" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 ease-in-out">Products</a>
                 <a href="#solutions" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 ease-in-out">Our Solutions</a>
                 <a href="#industries" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 ease-in-out">Industries</a>
                 <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition duration-300 ease-in-out">Contact</a>
@@ -84,7 +77,7 @@
         <div id="mobile-menu" class="md:hidden hidden mt-4">
             <a href="#home" class="block py-2 px-4 text-sm text-gray-700 hover:bg-blue-50 rounded">Home</a>
             <a href="#about" class="block py-2 px-4 text-sm text-gray-700 hover:bg-blue-50 rounded">About Us</a>
-            <a href="#technologies" class="block py-2 px-4 text-sm text-gray-700 hover:bg-blue-50 rounded">Technologies</a>
+            <a href="#products" class="block py-2 px-4 text-sm text-gray-700 hover:bg-blue-50 rounded">Products</a>
             <a href="#solutions" class="block py-2 px-4 text-sm text-gray-700 hover:bg-blue-50 rounded">Our Solutions</a>
             <a href="#industries" class="block py-2 px-4 text-sm text-gray-700 hover:bg-blue-50 rounded">Industries</a>
             <a href="#contact" class="block py-2 px-4 text-sm text-gray-700 hover:bg-blue-50 rounded">Contact</a>
@@ -132,50 +125,59 @@
         </div>
     </section>
 
-    <!-- Nonwoven Technologies Section -->
-    <section id="technologies" class="container mx-auto px-4 py-16 bg-white rounded-lg shadow-md mb-10 reveal-on-scroll">
-        <h3 class="text-3xl md:text-4xl font-bold text-center mb-10 text-blue-700">Nonwoven Technologies We Offer</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Technology cards are now clickable -->
-            <div class="tech-card bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out text-center cursor-pointer" data-title="Spunbond" data-img="https://placehold.co/300x200/3B82F6/FFFFFF?text=Spunbond" data-description="Spunbond technology produces nonwovens by spinning continuous filaments of thermoplastic polymers, which are then stretched and bonded. This results in fabrics with high tensile strength, durability, and uniformity, making them ideal for applications in hygiene, medical, construction, and agriculture.">
-                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=SB" alt="Spunbond Icon" class="mx-auto mb-4 rounded-full pointer-events-none">
-                <h4 class="text-xl font-semibold mb-2 text-blue-600 pointer-events-none">Spunbond</h4>
-                <p class="text-gray-700 text-sm pointer-events-none">Continuous filaments are extruded, stretched, and laid into a web, offering excellent strength and stability.</p>
+    <!-- Products We Offer Section -->
+    <section id="products" class="container mx-auto px-4 py-16 bg-white rounded-lg shadow-md mb-10 reveal-on-scroll">
+        <h3 class="text-3xl md:text-4xl font-bold text-center mb-10 text-blue-700">Products We Offer</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 text-center">
+                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=CB" alt="Carded Chemical Bond Icon" class="mx-auto mb-4 rounded-full">
+                <h4 class="text-xl font-semibold mb-2 text-blue-600">Carded Chemical Bond</h4>
+                <p class="text-gray-700 text-sm">Fibers bonded using chemical agents for versatile applications.</p>
             </div>
-             <div class="tech-card bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out text-center cursor-pointer" data-title="Meltblown" data-img="https://placehold.co/300x200/3B82F6/FFFFFF?text=Meltblown" data-description="Meltblown technology uses high-velocity air to blow molten thermoplastic resin from an extruder die tip onto a conveyor screen. This creates a fine, fibrous web of micro-denier fibers. The resulting fabric offers excellent filtration, barrier, and absorption properties, crucial for masks, wipes, and insulation.">
-                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=MB" alt="Meltblown Icon" class="mx-auto mb-4 rounded-full pointer-events-none">
-                <h4 class="text-xl font-semibold mb-2 text-blue-600 pointer-events-none">Meltblown</h4>
-                <p class="text-gray-700 text-sm pointer-events-none">Fine fibers are produced from molten polymer, creating a web with superior filtration and absorption properties.</p>
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 text-center">
+                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=TB" alt="Thermal Bond Icon" class="mx-auto mb-4 rounded-full">
+                <h4 class="text-xl font-semibold mb-2 text-blue-600">Thermal Bond</h4>
+                <p class="text-gray-700 text-sm">Heat-bonded fibers creating soft, yet strong materials.</p>
             </div>
-            <div class="tech-card bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out text-center cursor-pointer" data-title="SMS Composites" data-img="https://placehold.co/300x200/3B82F6/FFFFFF?text=SMS" data-description="SMS (Spunbond-Meltblown-Spunbond) is a tri-laminate nonwoven fabric. It combines the strength and durability of spunbond layers with the excellent filtration and barrier properties of the inner meltblown layer. This composite structure is widely used for medical gowns, drapes, and sterilization wraps.">
-                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=SMS" alt="SMS Icon" class="mx-auto mb-4 rounded-full pointer-events-none">
-                <h4 class="text-xl font-semibold mb-2 text-blue-600 pointer-events-none">SMS Composites</h4>
-                <p class="text-gray-700 text-sm pointer-events-none">Multi-layer fabric (Spunbond-Meltblown-Spunbond) that combines strength with a high-efficiency bacterial barrier.</p>
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 text-center">
+                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=SB" alt="Spunbond Icon" class="mx-auto mb-4 rounded-full">
+                <h4 class="text-xl font-semibold mb-2 text-blue-600">Spunbond</h4>
+                <p class="text-gray-700 text-sm">Continuous filaments offering excellent strength and stability.</p>
             </div>
-            <div class="tech-card bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out text-center cursor-pointer" data-title="Needlepunch" data-img="https://placehold.co/300x200/3B82F6/FFFFFF?text=Needlepunch" data-description="Needlepunch is a mechanical bonding process where a web of staple fibers is repeatedly penetrated by barbed needles. This entangles the fibers, creating a strong, dense fabric with a felt-like appearance. It's used for durable goods like geotextiles, automotive carpets, and furniture components.">
-                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=NP" alt="Needlepunch Icon" class="mx-auto mb-4 rounded-full pointer-events-none">
-                <h4 class="text-xl font-semibold mb-2 text-blue-600 pointer-events-none">Needlepunch</h4>
-                <p class="text-gray-700 text-sm pointer-events-none">Fibers are mechanically interlocked with barbed needles, resulting in dense, felt-like fabrics for durable applications.</p>
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 text-center">
+                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=NP" alt="Needlepunch Icon" class="mx-auto mb-4 rounded-full">
+                <h4 class="text-xl font-semibold mb-2 text-blue-600">Needlepunch</h4>
+                <p class="text-gray-700 text-sm">Mechanically interlocked fibers for dense, durable fabrics.</p>
             </div>
-            <div class="tech-card bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out text-center cursor-pointer" data-title="Spunlace" data-img="https://placehold.co/300x200/3B82F6/FFFFFF?text=Spunlace" data-description="Spunlace, or hydroentanglement, uses fine, high-pressure jets of water to entangle fibers and create a nonwoven fabric. The process avoids chemical binders, resulting in a soft, strong, and highly absorbent material that is excellent for wipes, medical gauze, and beauty applications.">
-                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=SL" alt="Spunlace Icon" class="mx-auto mb-4 rounded-full pointer-events-none">
-                <h4 class="text-xl font-semibold mb-2 text-blue-600 pointer-events-none">Spunlace</h4>
-                <p class="text-gray-700 text-sm pointer-events-none">Fibers are entangled using high-pressure water jets, creating soft, strong, and absorbent materials without binders.</p>
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 text-center">
+                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=SL" alt="Spunlace Icon" class="mx-auto mb-4 rounded-full">
+                <h4 class="text-xl font-semibold mb-2 text-blue-600">Spunlace</h4>
+                <p class="text-gray-700 text-sm">Water-jet entangled fibers for soft, absorbent materials.</p>
             </div>
-            <div class="tech-card bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out text-center cursor-pointer" data-title="Carded" data-img="https://placehold.co/300x200/3B82F6/FFFFFF?text=Carded" data-description="Carding is a mechanical process that opens, cleans, and aligns staple fibers to form a uniform web. This web can then be bonded through various methods (thermal, chemical, or needlepunch). Carded nonwovens are known for their softness and loft, commonly used in hygiene products, wipes, and interlinings.">
-                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=CD" alt="Carded Icon" class="mx-auto mb-4 rounded-full pointer-events-none">
-                <h4 class="text-xl font-semibold mb-2 text-blue-600 pointer-events-none">Carded</h4>
-                <p class="text-gray-700 text-sm pointer-events-none">Staple fibers are aligned to form a web, which can then be bonded. Ideal for creating lofty and soft products.</p>
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 text-center">
+                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=UB" alt="Ultrasonic Bond Icon" class="mx-auto mb-4 rounded-full">
+                <h4 class="text-xl font-semibold mb-2 text-blue-600">Ultrasonic Bond</h4>
+                <p class="text-gray-700 text-sm">Bonding via high-frequency vibrations for precise patterns.</p>
             </div>
-             <div class="tech-card bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out text-center cursor-pointer" data-title="Airlaid" data-img="https://placehold.co/300x200/3B82F6/FFFFFF?text=Airlaid" data-description="In the airlaid process, short fibers (often wood pulp) are suspended in air and deposited onto a moving screen to form a web. This creates a fabric with a structure similar to paper but with much higher bulk, softness, and absorption capacity, making it ideal for absorbent cores in diapers and feminine hygiene products.">
-                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=AL" alt="Airlaid Icon" class="mx-auto mb-4 rounded-full pointer-events-none">
-                <h4 class="text-xl font-semibold mb-2 text-blue-600 pointer-events-none">Airlaid</h4>
-                <p class="text-gray-700 text-sm pointer-events-none">Cellulose fibers are formed into a web with air, producing a highly absorbent, paper-like fabric structure.</p>
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 text-center">
+                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=LM" alt="Laminates Icon" class="mx-auto mb-4 rounded-full">
+                <h4 class="text-xl font-semibold mb-2 text-blue-600">Laminates</h4>
+                <p class="text-gray-700 text-sm">Multi-layered composite materials for enhanced properties.</p>
             </div>
-            <div class="tech-card bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition duration-300 ease-in-out text-center cursor-pointer" data-title="Wetlaid" data-img="https://placehold.co/300x200/3B82F6/FFFFFF?text=Wetlaid" data-description="The wetlaid process is similar to papermaking. Short fibers are dispersed in a large volume of water, which is then drained through a moving screen to form a web. This method allows for the use of a wide variety of natural and synthetic fibers, creating highly uniform and specialized fabrics for applications like tea bags, wallpapers, and filtration media.">
-                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=WL" alt="Wetlaid Icon" class="mx-auto mb-4 rounded-full pointer-events-none">
-                <h4 class="text-xl font-semibold mb-2 text-blue-600 pointer-events-none">Wetlaid</h4>
-                <p class="text-gray-700 text-sm pointer-events-none">Fibers are dispersed in water and collected on a screen, allowing for uniform webs with specialized fibers.</p>
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 text-center">
+                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=MB" alt="Meltblown Icon" class="mx-auto mb-4 rounded-full">
+                <h4 class="text-xl font-semibold mb-2 text-blue-600">Meltblown</h4>
+                <p class="text-gray-700 text-sm">Micro-fibers with superior filtration and barrier capabilities.</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 text-center">
+                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=KN" alt="Knits Icon" class="mx-auto mb-4 rounded-full">
+                <h4 class="text-xl font-semibold mb-2 text-blue-600">Knits</h4>
+                <p class="text-gray-700 text-sm">Interlocking looped yarns for flexible and stretchy fabrics.</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md border border-gray-200 text-center">
+                <img src="https://placehold.co/80x80/3B82F6/FFFFFF?text=FL" alt="Films Icon" class="mx-auto mb-4 rounded-full">
+                <h4 class="text-xl font-semibold mb-2 text-blue-600">Films</h4>
+                <p class="text-gray-700 text-sm">Thin, flexible sheets used as barriers or in composites.</p>
             </div>
         </div>
     </section>
@@ -285,7 +287,7 @@
                 </button>
             </form>
             <p class="text-center text-gray-600 mt-6 text-sm">
-                Or reach us at: <a href="mailto:info@preferrednonwoven.com" class="text-blue-600 hover:underline">info@preferrednonwoven.com</a>
+                Or reach us at: <a href="mailto:sales@preferrednonwovens.com" class="text-blue-600 hover:underline">sales@preferrednonwovens.com</a>
                 <br> Call Us: <a href="tel:765-749-6457" class="text-blue-600 hover:underline">765.749.6457</a>
             </p>
         </div>
@@ -304,19 +306,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Technology Modal -->
-    <div id="tech-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden">
-        <div id="tech-modal-backdrop" class="absolute inset-0 bg-black bg-opacity-60 opacity-0"></div>
-        <div id="tech-modal-content" class="relative bg-white w-11/12 md:max-w-2xl mx-auto rounded-xl shadow-2xl p-6 md:p-8 transform scale-95 opacity-0">
-            <button id="tech-modal-close" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-            <img id="tech-modal-img" src="" alt="Technology Image" class="w-full h-48 object-cover rounded-lg mb-4">
-            <h3 id="tech-modal-title" class="text-3xl font-bold text-blue-700 mb-3"></h3>
-            <p id="tech-modal-description" class="text-gray-700 leading-relaxed"></p>
-        </div>
-    </div>
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -348,43 +337,6 @@
             document.querySelectorAll('.reveal-on-scroll').forEach(section => {
                 observer.observe(section);
             });
-
-            // --- Technology Modal Logic ---
-            const techModal = document.getElementById('tech-modal');
-            const techModalBackdrop = document.getElementById('tech-modal-backdrop');
-            const techModalContent = document.getElementById('tech-modal-content');
-            const techModalClose = document.getElementById('tech-modal-close');
-            const techModalImg = document.getElementById('tech-modal-img');
-            const techModalTitle = document.getElementById('tech-modal-title');
-            const techModalDescription = document.getElementById('tech-modal-description');
-            
-            document.querySelectorAll('.tech-card').forEach(card => {
-                card.addEventListener('click', () => {
-                    // Populate modal
-                    techModalImg.src = card.dataset.img;
-                    techModalImg.alt = card.dataset.title;
-                    techModalTitle.textContent = card.dataset.title;
-                    techModalDescription.textContent = card.dataset.description;
-
-                    // Show modal with animation
-                    techModal.classList.remove('hidden');
-                    setTimeout(() => {
-                        techModalBackdrop.classList.remove('opacity-0');
-                        techModalContent.classList.remove('scale-95', 'opacity-0');
-                    }, 10); // small delay to allow display change
-                });
-            });
-
-            const closeModal = () => {
-                techModalBackdrop.classList.add('opacity-0');
-                techModalContent.classList.add('scale-95', 'opacity-0');
-                setTimeout(() => {
-                    techModal.classList.add('hidden');
-                }, 300); // match transition duration
-            };
-
-            techModalClose.addEventListener('click', closeModal);
-            techModalBackdrop.addEventListener('click', closeModal);
             
             // --- Dynamic Contact Form Logic ---
             const contactForm = document.getElementById('contact-form');
